@@ -12,7 +12,7 @@
   </head>
   <body>
     <center>
-    <h1>P004 = ลงทะเบียนแจ้งเตือน</h1>
+    <h1>P005 = ลงทะเบียนแจ้งเตือน</h1>
 <p>ใส่รหัสนักเรียน/นักศึกษา </p>
 <p>เพื่อรับแจ้งเตือนการเข้าเรียนทางไลน์</p>
   <div class="form-group mx-sm-3 mb-2">
@@ -57,14 +57,14 @@ function letg() {
         var theUrl = xurl+'?code='+exc+'&state='+excst+'&uid='+uid+'&uname='+uname;
         xmlhttp.open('GET', theUrl);
         xmlhttp.send();
-            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            //xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             //xmlhttp.onreadystatechange = function() {
         //if (this.readyState == 4 && this.status == 200) {
         //    var jsonResponse = JSON.parse(this.responseText);
         //}
         //var jsonResponse = 'jsonResponse';
         //alert(jsonResponse.desc);
-        //liff.closeWindow();
+        liff.closeWindow();
         // openWindow call
         //}
         });  
