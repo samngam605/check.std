@@ -63,7 +63,12 @@ function letg() {
         //}
         var jsonResponse = 'jsonResponse';
         alert(jsonResponse.desc);
-        liff.closeWindow();
+        //liff.closeWindow();
+        // openWindow call
+        liff.openWindow({
+        url: 'https://script.google.com/macros/s/AKfycby3OnJR4SGMqIRbPN1xNpitbuQTA2bSfQMd8mhb8bcwSaSg_mA8CzoR1OLoP9hWNT25QA/exec',
+         external: true,
+        });
       }});  
 }
 
