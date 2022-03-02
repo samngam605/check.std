@@ -4,32 +4,24 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
     <title>ITDEV.win</title>
   </head>
   <body>
     <center>
-    <h1>P035 = ลงทะเบียนแจ้งเตือน</h1>
-<p>ใส่รหัสนกเรียน/นักศึกษา </p>
-<p>เพื่อรับแจ้งเตือนการเข้าเรียนทางไลน์</p>
+    <h1>P036 = ลงทะเบียนเข้าสู่ระบบบันทึกการบ้าน version 1.0</h1>
+<p>(HRS:Homework Recording System)</p>
+<p>ชั้นมัธยมศึกษาปีที่ 2/7</p>
   <div class="form-group mx-sm-3 mb-2">
-    <label for="inputPassword2" class="sr-only">ใส่รหัสนักเรียน</label>
-    <input type="text" class="form-control" id="stdid" placeholder="ใส่รหัสนักเรียน">
+    <label for="satit-nu" class="sr-only">โรงเรียนมัธยมสาธิตมหาวิทยาลัยนเรศวร</label>
   </div></br></br>
   <div id="cin" class="visible"><button type="button" class="btn btn-success" onclick="letg()">เชื่อมต่อกับไลน์</button>
-<p id="tex1"></p>
-
-
 </center>
-
 <script>
 window.onload = function() {
   initializeLiff('1656916607-zJo6pPdw');
 }
-
 function initializeLiff(myLiffId) {
     liff
         .init({
@@ -40,41 +32,15 @@ function initializeLiff(myLiffId) {
         .catch((err) => {
         });
 }
-  
-//const xurl = "https://script.google.com/macros/s/AKfycby3OnJR4SGMqIRbPN1xNpitbuQTA2bSfQMd8mhb8bcwSaSg_mA8CzoR1OLoP9hWNT25QA/exec";
-//var myParam = window.location.search;
-//var exc = myParam.split('code=')[1].split('&')[0];
-//var excst = myParam.split('state=')[1].split('&')[0];
-//var exc = 'notify';
-//var excst = '1101';
 function letg() {
         liff.getProfile().then(function(profile) {
         var uid = profile.userId;
         var uname = profile.displayName;
-
-//alert(uid+'****'+exc+'****'+excst);
-        //var xmlhttp = new XMLHttpRequest();
-        //var theUrl = xurl+'?code='+exc+'&state='+excst+'&uid='+uid+'&uname='+uname;
-        //xmlhttp.open('GET', theUrl);
-        //xmlhttp.send();
-            //xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            //xmlhttp.onreadystatechange = function() {
-        //if (this.readyState == 4 && this.status == 200) {
-        //    var jsonResponse = JSON.parse(this.responseText);
-        //}
-        //var jsonResponse = 'jsonResponse';
-        //alert(jsonResponse.desc);
-        //***liff.closeWindow();
+        //alert("Test");
         window.location.replace('https://script.google.com/macros/s/AKfycbwlqtBuSC9gpmDvrtvrFMVJfzzVKTV-l1-L28cosqqFFAN6-SiLL_COV_sJ28lZlT_-ng/exec?uid='+uid+'&uname='+uname);
-        // openWindow call
-        //}
         });  
 }
-
 </script>
-
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
