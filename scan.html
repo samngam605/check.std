@@ -42,7 +42,7 @@
  
  
 <div class="wrap-qrcode-scanner">
-    <h1>QRCode Scanner</h1>
+    <h1>QRCode Scanner v1</h1>
     <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
     <canvas id="canvas" hidden></canvas>
     <div id="output" hidden>
@@ -122,7 +122,7 @@
             };  
             // ให้เริ่มเล่นวิดีโอก่อนล็กน้อย เพื่อล้างค่ารูป qrcod ล่าสุด เป็นการใช้รูปจากกล้องแทน
             //post data
-            const xurl = "https://script.google.com/macros/s/AKfycbyyH-TXPOE6O7JEMANrpTqZKx334MlKNNk_diHCwRTux7_k0Db7H2xVodsRW-fN1Qp9aA/exec";
+            const xurl = "https://script.google.com/macros/s/AKfycbyadsrnxZYe-lZ4O3qFm1C8RS8PI1ybXTNq3TfTmNC5aQyokM4wGTSqxWxl3H_L50YG0w/exec";
             var stdcode = code.data;
             var xmlhttp = new XMLHttpRequest();
             var theUrl = xurl+'?stdcode='+stdcode;
