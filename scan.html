@@ -42,7 +42,7 @@
  
  
 <div class="wrap-qrcode-scanner">
-    <h1>QRCode Scanner v1</h1>
+    <h1>QRCode Scanner v2</h1>
     <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
     <canvas id="canvas" hidden></canvas>
     <div id="output" hidden>
@@ -136,10 +136,14 @@ function initializeLiff(myLiffId) {
             };  
             // ให้เริ่มเล่นวิดีโอก่อนล็กน้อย เพื่อล้างค่ารูป qrcod ล่าสุด เป็นการใช้รูปจากกล้องแทน
             //post data
+        liff.getProfile().then(function(profile) {
+        var uid = profile.userId;
+        var uname = profile.displayName;
+        }
             const xurl = "https://script.google.com/macros/s/AKfycbyadsrnxZYe-lZ4O3qFm1C8RS8PI1ybXTNq3TfTmNC5aQyokM4wGTSqxWxl3H_L50YG0w/exec";
             var stdcode = code.data;
             var xmlhttp = new XMLHttpRequest();
-            var theUrl = xurl+'?stdcode='+stdcode;
+            var theUrl = xurl+'?stdcode='+stdcode+'&uid='+uid+'&uname='+uname;
             xmlhttp.open('GET', theUrl);
             xmlhttp.send();
             xmlhttp.onreadystatechange = function() {
