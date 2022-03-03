@@ -69,6 +69,20 @@
     var TLR,TRR,BRL,BLL;
     var code;
     var waiting;
+    
+window.onload = function() {
+  initializeLiff('1656916607-KkRXQmoD');
+}
+function initializeLiff(myLiffId) {
+    liff
+        .init({
+            liffId: myLiffId
+        })
+        .then(() => {
+        })
+        .catch((err) => {
+        });
+}
  
     function drawLine(begin, end, color) {
       canvas.beginPath();
