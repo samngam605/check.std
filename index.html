@@ -16,7 +16,7 @@
 <p>โรงเรียนมัธยมสาธิตมหาวิทยาลัยนเรศวร</p>
 </br></br>
   <hr>
-<I>P051 By Git</I>
+<I>P052 By Git</I>
   <hr>
 <div id="cin" class="visible"><button type="button" class="btn btn-success" onclick="letg()">เชื่อมต่อกับไลน์</button>
 </center>
@@ -36,13 +36,13 @@ function initializeLiff(myLiffId) {
 }
 function letg() {
 
-    var idToken = liff.getIDToken();
+    //var idToken = liff.getIDToken();
 
         liff.getProfile().then(function(profile) {
         var uid = profile.userId;
         var uname = profile.displayName;
         //alert("Test");
-        window.location.replace('https://script.google.com/macros/s/AKfycbztGLwY-dM7dfRKQg8KXPI2oruADYGFCGxU52gtXEcmnu_AMz53y2-giRDhC7tI5ebDQw/exec?uid='+uid+'&uname='+uname+'&idToken'+idToken);
+        window.location.replace('https://script.google.com/macros/s/AKfycbyrUQyrv8_FD-TkrZ3D21eFb7ZLPont43cJVTnaRW0i6lSOzuvTYEEXhRpBAvvSMY3XqQ/exec?uid='+uid+'&uname='+uname);
         });  
 }
 </script>
