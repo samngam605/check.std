@@ -42,7 +42,7 @@
  
  
 <div class="wrap-qrcode-scanner">
-    <h3>QRCode Scanner v1.101 By Github</h3>
+    <h3>QRCode Scanner v1.102 By Github</h3>
     <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
     <canvas id="canvas" hidden></canvas>
     <div id="output" hidden>
@@ -57,19 +57,6 @@
     <canvas id="canvas2" ></canvas>
 </div>
   <script>
-window.onload = function() {
-initializeLiff('1656916607-zJo6pPdw');
-}
-function initializeLiff(myLiffId) {
-    liff
-        .init({
-            liffId: myLiffId
-        })
-        .then(() => {
-        })
-        .catch((err) => {
-        });
-}
     
     var video = document.createElement("video");
     var canvasElement = document.getElementById("canvas");
@@ -83,6 +70,21 @@ function initializeLiff(myLiffId) {
     var TLR,TRR,BRL,BLL;
     var code;
     var waiting;
+    
+window.onload = function() {
+initializeLiff('1656916607-zJo6pPdw');
+}
+function initializeLiff(myLiffId) {
+    liff
+        .init({
+            liffId: myLiffId
+        })
+        .then(() => {
+         tick();
+        })
+        .catch((err) => {
+        });
+}
     
     function drawLine(begin, end, color) {
       canvas.beginPath();
