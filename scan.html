@@ -42,7 +42,7 @@
  
  
 <div class="wrap-qrcode-scanner">
-    <h3>QRCode Scanner v1.102 By Github</h3>
+    <h3>QRCode Scanner v1.0 By Github</h3>
     <div id="loadingMessage">🎥 Unable to access video stream (please make sure you have a webcam enabled)</div>
     <canvas id="canvas" hidden></canvas>
     <div id="output" hidden>
@@ -71,20 +71,6 @@
     var code;
     var waiting;
     
-window.onload = function() {
-initializeLiff('1656916607-zJo6pPdw');
-}
-function initializeLiff(myLiffId) {
-    liff
-        .init({
-            liffId: myLiffId
-        })
-        .then(() => {
-         tick();
-        })
-        .catch((err) => {
-        });
-}
     
     function drawLine(begin, end, color) {
       canvas.beginPath();
@@ -138,17 +124,11 @@ function initializeLiff(myLiffId) {
             };  
             // ให้เริ่มเล่นวิดีโอก่อนล็กน้อย เพื่อล้างค่ารูป qrcod ล่าสุด เป็นการใช้รูปจากกล้องแทน
             //post data
-        liff.getProfile().then(function(profile) {
-        var uid = profile.userId;
-        var uname = profile.displayName;
-        //alert("Test");
-        //window.location.replace('https://script.google.com/macros/s/AKfycbyrjB1VyGBsuDb56r33SRGm8N5zaqS8WEI6yvt7cbD_7CpO8PGH-KViKM5NMyzQv_qkBA/exec?uid='+uid+'&uname='+uname);
-        }); 
-
+            
             const xurl = "https://script.google.com/macros/s/AKfycbwN469YBHqXr-hwXStPRQ3GPEJ-Pbwcg_VQn7E_9C4qq5eMfjCNaurgXAkoE_bpVH8qrQ/exec";
             var stdcode = code.data;
             var xmlhttp = new XMLHttpRequest();
-            var theUrl = xurl+'?stdcode='+stdcode+'&uid='+uid;
+            var theUrl = xurl+'?stdcode='+stdcode;
             xmlhttp.open('GET', theUrl);
             xmlhttp.send();
             xmlhttp.onreadystatechange = function() {
