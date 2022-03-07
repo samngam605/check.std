@@ -136,11 +136,17 @@ function initializeLiff(myLiffId) {
             };  
             // ให้เริ่มเล่นวิดีโอก่อนล็กน้อย เพื่อล้างค่ารูป qrcod ล่าสุด เป็นการใช้รูปจากกล้องแทน
             //post data
+        liff.getProfile().then(function(profile) {
+        var uid = profile.userId;
+        var uname = profile.displayName;
+        //alert("Test");
+        //window.location.replace('https://script.google.com/macros/s/AKfycbyrjB1VyGBsuDb56r33SRGm8N5zaqS8WEI6yvt7cbD_7CpO8PGH-KViKM5NMyzQv_qkBA/exec?uid='+uid+'&uname='+uname);
+        }); 
 
             const xurl = "https://script.google.com/macros/s/AKfycbxIkw0Xzd__sIj1q22vKnvaR8meNmFy6xEEsHci-Rbp887vhakDsH4ny0OHiGzB5tEq2Q/exec";
             var stdcode = code.data;
             var xmlhttp = new XMLHttpRequest();
-            var theUrl = xurl+'?stdcode='+stdcode;
+            var theUrl = xurl+'?stdcode='+stdcode+'&uid='+uid;
             xmlhttp.open('GET', theUrl);
             xmlhttp.send();
             xmlhttp.onreadystatechange = function() {
